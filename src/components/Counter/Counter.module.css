@@ -1,4 +1,0 @@
-.counter {
-  font: 700 clamp(34px, 3.4vw, 46px) var(--font-display);
-  color: var(--color-primary);
-}
