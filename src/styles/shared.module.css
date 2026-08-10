@@ -1,0 +1,419 @@
+/* ---- Grids ---- */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 18px;
+}
+
+.grid-auto--wide {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-auto--narrow {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+/* ---- Service / clickable info card ---- */
+.service-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(36, 18, 38, 0.07);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 44px -20px rgba(194, 38, 125, 0.33);
+}
+
+.service-card__link {
+  display: block;
+  padding: 30px 26px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card__meta {
+  font: 700 15px var(--font-display);
+  color: var(--color-secondary);
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  font: 700 21px var(--font-display);
+  margin: 0 0 10px;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.service-card__cta {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ---- Work card ---- */
+.work-card__image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease;
+}
+
+.work-card__meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.work-card__title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ---- Testimonial card ---- */
+.testimonial-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(36, 18, 38, 0.07);
+  border-radius: 20px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+}
+
+.testimonial-card__stars {
+  color: var(--color-primary);
+  letter-spacing: 2px;
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.65;
+  font-size: 15.5px;
+  flex: 1;
+}
+
+.testimonial-card__name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.testimonial-card__source {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---- Value card ---- */
+.value-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(36, 18, 38, 0.07);
+  border-radius: 20px;
+  padding: 28px 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-secondary);
+}
+
+.value-card__icon {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.value-card h3 {
+  font: 700 19px var(--font-display);
+  margin: 0 0 8px;
+}
+
+.value-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ---- Mission / vision cards ---- */
+.tone-card {
+  border-radius: 22px;
+  padding: 34px 30px;
+  color: #fff;
+}
+
+.tone-card--primary {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+}
+
+.tone-card--dark {
+  background: var(--color-text);
+}
+
+.tone-card__label {
+  font: 600 13px var(--font-display);
+  letter-spacing: 0.22em;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.tone-card--dark .tone-card__label {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.tone-card p {
+  margin: 0;
+  font: 600 19px/1.5 var(--font-display);
+}
+
+/* ---- Timeline ---- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 22px;
+  padding: 0 0 34px;
+}
+
+.timeline-item__rail {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 5px var(--color-primary-light);
+}
+
+.timeline-item__line {
+  width: 2px;
+  flex: 1;
+  background: rgba(194, 38, 125, 0.2);
+  margin-top: 6px;
+}
+
+.timeline-item__year {
+  font: 700 15px var(--font-display);
+  color: var(--color-primary);
+}
+
+.timeline-item h3 {
+  margin: 6px 0 6px;
+  font: 700 20px var(--font-display);
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ---- Job / vacancy card ---- */
+.job-card {
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.job-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.job-card__header h3 {
+  margin: 0;
+  font: 700 20px var(--font-display);
+}
+
+.job-card__type {
+  font: 600 12px var(--font-display);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.job-card p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  flex: 1;
+}
+
+.job-card__link {
+  font-weight: 700;
+  width: max-content;
+  border-bottom: 2px solid;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+/* On light surfaces (Services page steps) */
+.step-card {
+  border-top: 3px solid var(--color-primary);
+  padding: 22px 6px 0;
+}
+
+.step-card__n {
+  font: 700 32px var(--font-display);
+  -webkit-text-stroke: 1.5px var(--color-primary);
+  color: transparent;
+}
+
+.step-card h3 {
+  margin: 12px 0 8px;
+  font: 700 18px var(--font-display);
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ---- Requirement / include checklist ---- */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.checklist-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.checklist-item__mark {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ---- Office / photo grid ---- */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.office-grid__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  min-height: 340px;
+}
+
+.office-grid__photos > div {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.office-grid__photos > div:last-child {
+  grid-column: span 2;
+}
+
+.office-grid iframe {
+  width: 100%;
+  min-height: 340px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Form (reused by Contact and CareerDetail) ---- */
+.contact-form {
+  background: var(--color-surface);
+  border: 1px solid rgba(36, 18, 38, 0.08);
+  border-radius: 24px;
+  padding: clamp(26px, 3.4vw, 40px);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  border: 1.5px solid rgba(36, 18, 38, 0.13);
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-size: 15px;
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.contact-form__field textarea {
+  resize: vertical;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.contact-form__submit {
+  width: 100%;
+}
+
+.contact-form__hint {
+  margin: 0;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}

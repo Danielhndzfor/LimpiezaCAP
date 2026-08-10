@@ -1,0 +1,27 @@
+.faq-page {
+  max-width: 860px;
+}
+
+.faq-page__title {
+  margin: 0 0 44px;
+  font: 700 clamp(34px, 4.6vw, 58px) / 1.08 var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.faq-page__banner {
+  margin-top: 40px;
+  background: var(--color-primary-light);
+  border-radius: 20px;
+  padding: 26px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.faq-page__banner p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
