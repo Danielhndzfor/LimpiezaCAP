@@ -1,0 +1,14 @@
+# SPA fallback: si la ruta pedida no es un archivo ni una carpeta real
+# (JS, CSS, imágenes, etc.), sirve index.html y deja que React Router
+# decida qué vista mostrar. Sin esto, recargar o usar atrás/adelante en
+# una ruta como /contacto da 404 porque ese archivo no existe en el servidor.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
